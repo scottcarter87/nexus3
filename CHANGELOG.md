@@ -1,4 +1,6 @@
 # Changelog
+## 3.0.X -----
+- Nexus3 properties are now attribute-driven.
 
 ## 3.0.0 2018-06-15
 
@@ -36,7 +38,7 @@ A lot of changes went into this release.
 
 ## 0.9.2 2016-10-14
 
-- Fix #16 Fixes version regex that matches host-name when containing digits 
+- Fix #16 Fixes version regex that matches host-name when containing digits
 
 ## 0.9.1 2016-09-06
 
@@ -53,7 +55,7 @@ A lot of changes went into this release.
 ## 0.7.0 2016-08-19
 
 - Replace root attribute with path
-- Fix #10 nexus3_api ignore_failure attribute defaults to false 
+- Fix #10 nexus3_api ignore_failure attribute defaults to false
 
 ## 0.6.0 2016-08-15
 

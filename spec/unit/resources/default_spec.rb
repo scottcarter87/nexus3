@@ -51,11 +51,11 @@ describe 'nexus3_test::default' do
         .to notify('ruby_block[block until operational]').to(:run).delayed
     end
 
-    it 'creates properties template' do
-      expect(chef_run).to create_template('/opt/sonatype-work/nexus3/etc/nexus.properties')
-      expect(chef_run.template('/opt/sonatype-work/nexus3/etc/nexus.properties'))
+    it 'creates properties file' do
+      expect(chef_run).to create_file('/opt/sonatype-work/nexus3/etc/nexus.properties')
+      expect(chef_run.file('/opt/sonatype-work/nexus3/etc/nexus.properties'))
         .to notify('nexus3_service[foo]').to(:restart).delayed
-      expect(chef_run.template('/opt/sonatype-work/nexus3/etc/nexus.properties'))
+      expect(chef_run.file('/opt/sonatype-work/nexus3/etc/nexus.properties'))
         .to notify('ruby_block[block until operational]').to(:run).delayed
     end
 
@@ -123,11 +123,11 @@ describe 'nexus3_test::default' do
         .to notify('ruby_block[block until operational]').to(:run).delayed
     end
 
-    it 'creates properties template' do
-      expect(chef_run).to create_template('C:\Nexus3/sonatype-work/nexus3/etc/nexus.properties')
-      expect(chef_run.template('C:\Nexus3/sonatype-work/nexus3/etc/nexus.properties'))
+    it 'creates properties file' do
+      expect(chef_run).to create_file('C:\Nexus3/sonatype-work/nexus3/etc/nexus.properties')
+      expect(chef_run.file('C:\Nexus3/sonatype-work/nexus3/etc/nexus.properties'))
         .to notify('nexus3_service[foo]').to(:restart).delayed
-      expect(chef_run.template('C:\Nexus3/sonatype-work/nexus3/etc/nexus.properties'))
+      expect(chef_run.file('C:\Nexus3/sonatype-work/nexus3/etc/nexus.properties'))
         .to notify('ruby_block[block until operational]').to(:run).delayed
     end
 
