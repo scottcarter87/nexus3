@@ -40,8 +40,8 @@ default['nexus3']['vmoptions_variables']['Dkaraf.base'] = '.'
 default['nexus3']['vmoptions_variables']['Dkaraf.home'] = '.'
 default['nexus3']['vmoptions_variables']['Dkaraf.startLocalConsole'] = false
 default['nexus3']['vmoptions_variables']['Djava.net.preferIPv4Stack'] = true
-on_attribute_update('nexus3', 'data') do
-  default['nexus3']['vmoptions_variables']['XX:LogFile'] = ::File.join(node['nexus3']['data'], 'log', 'jvm.log')
-  default['nexus3']['vmoptions_variables']['Dkaraf.data'] = node['nexus3']['data']
-  default['nexus3']['vmoptions_variables']['Djava.io.tmpdir'] = ::File.join(node['nexus3']['data'], 'tmp')
-end
+#on_attribute_update('nexus3', 'data') do
+#  default['nexus3']['vmoptions_variables']['XX:LogFile'] = ::File.join(node['nexus3']['data'], 'log', 'jvm.log')
+#  default['nexus3']['vmoptions_variables']['Dkaraf.data'] = node['nexus3']['data']
+#  default['nexus3']['vmoptions_variables']['Djava.io.tmpdir'] = ::File.join(node['nexus3']['data'], 'tmp')
+#end
